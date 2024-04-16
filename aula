@@ -1,0 +1,64 @@
+using bizarro;
+using bizarro.Classes;
+using System;
+using System.Globalization;
+
+namespace CalcMediaCs
+{
+    public class program
+    {
+        static void Main()
+        {
+            Triangulo z = new Triangulo();
+            Console.WriteLine($"A = {z.A}, B = {z.B}; C = {z.C}");
+
+             z = new Triangulo(3.5, 4.5, 7.5);
+            Console.WriteLine($"A = {z.A}, B = {z.B}, C = {z.C}");
+            z.ImprimeArea
+        }
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bizarro.Classes
+{
+    internal class Triangulo
+    {
+        public double A { get; private set; }
+        public double B { get; private set; }
+        public double C { get; private set; }
+        public Triangulo()
+        {
+
+        }
+
+        public Triangulo(double a, double b, double c)
+        {
+        A = a;
+        B = b;
+        C = c;
+        }
+        public double Area()
+        {
+            double p = (A + B + C) /2.0;
+            return Math.Sqrt(p *(p-A)*(p-B)*(p-C));
+        }
+        public void ImprimeArea()
+        {
+
+        }
+            public void Capturacoordenadas()
+        {
+
+        }
+
+    }
+}
